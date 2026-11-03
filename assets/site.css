@@ -1,0 +1,27 @@
+/* Sky by day, deep blue by night. Pages are short reading pages with one column. */
+:root {
+  --bg: #f7fbff; --fg: #14202e; --muted: #5a6b7d; --line: #dbe6f1; --accent: #1f6fd1; --card: #ffffff;
+  --display: "Baloo 2", ui-rounded, "SF Pro Rounded", system-ui, sans-serif;
+  --body: "Nunito Sans", -apple-system, system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0d1626; --fg: #e8eef7; --muted: #9fb0c4; --line: #23324a; --accent: #7db4ff; --card: #142036; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 var(--body); }
+main { max-width: 680px; margin: 0 auto; padding-block: 40px 72px; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+h1, h2 { font-family: var(--display); line-height: 1.15; text-wrap: balance; }
+h1 { font-size: 2.4rem; margin: 0 0 4px; }
+h2 { font-size: 1.3rem; margin: 2rem 0 0.4rem; }
+p, li { max-width: 65ch; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.muted { color: var(--muted); }
+.mark { font-size: 3rem; line-height: 1; }
+nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 20px 0 8px; font-weight: 600; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; margin-top: 16px; }
+dl { display: grid; gap: 4px 0; margin: 0; }
+dt { font-weight: 700; margin-top: 12px; }
+dd { margin: 0; color: var(--muted); }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 0.9rem; color: var(--muted); }
